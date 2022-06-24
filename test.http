@@ -1,0 +1,21 @@
+GET http://localhost:8080/dev/second
+
+###
+
+POST http://localhost:8080/dev/second
+
+{
+
+}
+
+### 
+
+GET http://localhost:8080/dev/third
+
+###
+
+POST http://localhost:8080/dev/third
+
+{
+    "tiles": "[[1,1],[2,2],[3,3]]"
+}

@@ -1,0 +1,5 @@
+/node_modules
+package-lock.json
+.chiseld.db
+.chiseld.db-shm
+.chiseld.db-wal
