@@ -1,11 +1,14 @@
 {
     "compilerOptions": {
-        "experimentalDecorators": true,
+        "experimentalDecorators":true,
         "lib": ["ESNext", "DOM"],
         "target": "ESnext",
         "allowJs": true,
         "module": "ESnext",
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "paths": {
+            "../models/*": ["models/*"]
+        },
     },
-    "exclude": [".webpack"]
+    "exclude": [".webpack"],
 }

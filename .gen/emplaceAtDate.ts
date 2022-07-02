@@ -1,6 +1,6 @@
 import { responseFromJson as response } from "@chiselstrike/api";
 import { BBanner } from "../models/BBanner";
-import { ABoard } from "../models/ABoard";
+import { ABoard } from "../../models/ABoard";
 export default async function chisel(req) {
     if (req.method !== "PUT") {
         return response("four hundred five", 405);
