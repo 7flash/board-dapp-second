@@ -1,5 +1,5 @@
 import { ChiselEntity } from "@chiselstrike/api";
 
-export class ABoard extends ChiselEntity {
+export class BBoard extends ChiselEntity {
     date?: string;
 }

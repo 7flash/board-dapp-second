@@ -1,8 +1,8 @@
 import { ChiselEntity } from "@chiselstrike/api";
-import { ABoard } from './ABoard';
+import { BBoard } from './BBoard';
 
-export class BBanner extends ChiselEntity {
+export class ABanner extends ChiselEntity {
     title?: string;
     description?: string;
-    board: ABoard;
+    board: BBoard;
 }
