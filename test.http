@@ -1,21 +1,46 @@
-GET http://localhost:8080/dev/second
+## Boards
 
-###
 
-POST http://localhost:8080/dev/second
+### get all boards
+GET http://localhost:8080/dev/boards
 
-{
+### get board by date
+GET http://localhost:8080/dev/boards?.date=July 4
 
-}
-
-### 
-
-GET http://localhost:8080/dev/third
-
-###
-
-POST http://localhost:8080/dev/third
+### create a new board
+POST http://localhost:8080/dev/boards
 
 {
-    "tiles": "[[1,1],[2,2],[3,3]]"
+    "date": "July 4"
 }
+
+### delete existing board
+DELETE http://localhost:8080/dev/boards/fb52c3fb-5f96-40f9-96b4-66d730b20f11
+
+{
+    "date": "July 4"
+}
+
+
+## Banners
+
+### create a new banner at board chosen by date
+POST http://localhost:8080/dev/banners
+
+{
+    "title": "First",
+    "description": "Second",
+    "pictureUrl": "",
+    "date": "July 4",
+    "rectHeight": 3,
+    "rectWidth": 4,
+    "xPosition": 5,
+    "yPosition": 5,
+    "color": "violet"
+}
+
+### get all banners
+GET http://localhost:8080/dev/banners
+
+### get banners placed at the board of chosen date
+GET http://localhost:8080/dev/banners?.date=July 4
