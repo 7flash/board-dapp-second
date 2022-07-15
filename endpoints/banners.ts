@@ -7,11 +7,11 @@ export default async function chisel(req: ChiselRequest) {
         const payload = await req.json();
 
         try {
-            const board = await Board.findOne((v) => v.date === payload.date);
+            // const board = await Board.findOne((v) => v.date === payload.date);
     
-            if (!board) {
-                throw 'board not found at date ' + payload.date;
-            }
+            // if (!board) {
+            //     throw 'board not found at date ' + payload.date;
+            // }
 
             // TODO: check intersections
 
@@ -23,10 +23,10 @@ export default async function chisel(req: ChiselRequest) {
                 throw 'unexpected y coordinates';
             }
 
-            delete payload.date;
+            // delete payload.date;
 
             const banner = Banner.build({
-                board: board,
+                // board: board,
                 ...payload,
             });
     
@@ -52,7 +52,8 @@ export default async function chisel(req: ChiselRequest) {
             // }).sortBy("createdAt", true);
 
             banners = await Banner.findMany(v => {
-                return v.board.date == date;
+                return v.date == date;
+                // return v.board.date == date;
             });
         } else {
             banners = await Banner.findAll();

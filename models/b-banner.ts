@@ -10,5 +10,6 @@ export class Banner extends ChiselEntity {
     xPosition: number;
     yPosition: number;
     color?: string;
-    board: Board;
+    date?: string;
+    // board: Board;
 }
